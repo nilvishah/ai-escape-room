@@ -1,12 +1,12 @@
 # AI Escape Room
 
-A browser-based escape room game where the rooms aren't designed by a person — an LLM generates them. Every time you play, you get a new room: a new theme, new objects, new puzzles, new clues. No two playthroughs are the same.
+A browser-based escape room game where the rooms aren't designed by a person - an LLM generates them. Every time you play, you get a new room: a new theme, new objects, new puzzles, new clues. No two playthroughs are the same.
 
 ## How it works
 
-When you start a game, a prompt goes out to an LLM (Groq running Llama 3.3) asking it to design a room. It comes back with a full blueprint in JSON — the room's theme, what objects are in it, the puzzles, the clues, and which puzzle unlocks what. That blueprint gets fed into a 3D engine built from scratch in Three.js, which places the furniture, sets the lighting, and builds the room you actually walk around in.
+When you start a game, a prompt goes out to an LLM (Groq running Llama 3.3) asking it to design a room. It comes back with a full blueprint in JSON - the room's theme, what objects are in it, the puzzles, the clues, and which puzzle unlocks what. That blueprint gets fed into a 3D engine built from scratch in Three.js, which places the furniture, sets the lighting, and builds the room you actually walk around in.
 
-The part I cared about most: making sure the AI's output is actually *solvable*. There's a validation layer that checks the generated JSON for referential integrity — basically making sure every puzzle chain makes logical sense before the room ever renders. If the AI's output fails validation, it doesn't just get thrown away — the model gets its own broken output plus the specific error, and fixes it.
+The part I cared about most: making sure the AI's output is actually *solvable*. There's a validation layer that checks the generated JSON for referential integrity - basically making sure every puzzle chain makes logical sense before the room ever renders. If the AI's output fails validation, it doesn't just get thrown away - the model gets its own broken output plus the specific error, and fixes it.
 
 ## Features
 - 6 room archetypes, 7 interactive puzzle types
