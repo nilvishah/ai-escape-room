@@ -10,10 +10,10 @@ The part I cared about most: making sure the AI's output is actually *solvable*.
 
 ## Features
 - 6 room archetypes, 7 interactive puzzle types
-- Procedural generation — a new room every time
+- Procedural generation - a new room every time
 - Dependency graph validation so puzzle chains are always solvable
 - Self-correcting generation when the AI messes up
-- Context-aware hint system — hints are based on what you've already solved, so they don't spoil anything
+- Context-aware hint system - hints are based on what you've already solved, so they don't spoil anything
 - Built with vanilla Three.js, no game engine
 
 ## Stack
